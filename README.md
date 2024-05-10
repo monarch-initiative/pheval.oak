@@ -1,6 +1,8 @@
 # Template Runner for PhEval
 
-This serves as a template repository designed for crafting a personalised PhEval runner. Presently, the runner executes a mock predictor found in `src/pheval_template/run/fake_predictor.py`. Nevertheless, the primary objective is to leverage this repository as a starting point to develop your own runner for your tool, allowing you to customise and override existing methods effortlessly, given that it already encompasses all the necessary setup for integration with PhEval. There are exemplary methods throughout the runner to provide an idea on how things could be implemented.
+This serves as a template repository designed for crafting a personalised PhEval runner. [PhEval](https://monarch-initiative.github.io/pheval/) (Phenotypic Inference Evaluation Framework) is an extensible framework for evaluating variant priorotization and phenotype matching pipelines.
+
+Presently, the runner executes a mock predictor found in `src/pheval_template/run/fake_predictor.py`. Nevertheless, the primary objective is to leverage this repository as a starting point to develop your own runner for your tool, allowing you to customise and override existing methods effortlessly, given that it already encompasses all the necessary setup for integration with PhEval. There are exemplary methods throughout the runner to provide an idea on how things could be implemented.
 
 # Installation
 
