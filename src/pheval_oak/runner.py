@@ -5,7 +5,7 @@ from pheval.runners.runner import PhEvalRunner
 
 
 @dataclass
-class TemplatePhEvalRunner(PhEvalRunner):
+class PhenologRunner(PhEvalRunner):
     input_dir: Path
     testdata_dir: Path
     tmp_dir: Path

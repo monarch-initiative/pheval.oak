@@ -12,7 +12,7 @@ pheval = "^0.3.2"
 
 
 [tool.poetry.plugins."pheval.plugins"]
-template = "pheval_oak.runner:TemplatePhEvalRunner"
+phenolog = "pheval_oak.runner:PhenologRunner"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.1.2"
