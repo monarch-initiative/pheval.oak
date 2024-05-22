@@ -1,14 +1,13 @@
-# Template Runner for PhEval
+# OAK Runner for PhEval (WORK IN PROGRESS)
 
-This serves as a template repository designed for crafting a personalised PhEval runner. [PhEval](https://monarch-initiative.github.io/pheval/) (Phenotypic Inference Evaluation Framework) is an extensible framework for evaluating variant priorotization and phenotype matching pipelines.
+This serves as an OAK PhEval runner. [PhEval](https://monarch-initiative.github.io/pheval/) (Phenotypic Inference Evaluation Framework) is an extensible framework for evaluating variant prioritisation and phenotype matching pipelines.
 
-Presently, the runner executes a mock predictor found in `src/pheval_template/run/fake_predictor.py`. Nevertheless, the primary objective is to leverage this repository as a starting point to develop your own runner for your tool, allowing you to customise and override existing methods effortlessly, given that it already encompasses all the necessary setup for integration with PhEval. There are exemplary methods throughout the runner to provide an idea on how things could be implemented.
 
 # Installation
 
 ```bash
-git clone https://github.com/yaseminbridges/pheval.template.git
-cd pheval.template
+git clone https://github.com/monarch-initiative/pheval.oak.git
+cd pheval.oak
 poetry install
 poetry shell
 ```
@@ -32,7 +31,7 @@ The testdata directory should include the subdirectory named `phenopackets` - wh
 
 ```bash
 pheval run --input-dir /path/to/input_dir \
---runner templatephevalrunner \
+--runner phenologrunner \
 --output-dir /path/to/output_dir \
 --testdata-dir /path/to/testdata_dir
 ```
@@ -50,14 +49,5 @@ pheval-utils benchmark --directory /path/to/output_directoy \
 ```
 
 The path provided to the `--directory` parameter should be the same as the one provided to the `--output-dir` in the `pheval run` command
-
-# Personalising to your own tool
-
-If overriding this template to create your own runner implementation. There are key files that should change to fit with your runner implementation.
-
-1. The name of the Runner class in `src/pheval_template/runner.py` should be changed.
-2. Once the name of the Runner class has been customised, line 15 in `pyproject.toml` should also be changed to match the class name, then run `poetry lock` and `poetry install`
-
-The runner you give on the CLI will then change to the name of the runner class.
 
 You should also remove the `src/pheval_template/run/fake_predictor.py` and implement the running of your own tool. Methods in the post-processing can also be altered to process your own tools output.
